@@ -1,0 +1,33 @@
+.title-wrapper {
+    background: green;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    line-height: 50px;
+}
+.instructions {
+    background: brown;
+    padding-top: 20px;
+}
+.add-up-wrapper {
+    background: yellow;
+    height: 150px;
+
+}
+.win-loss-wrapper {
+    background: blue;
+    height: 150px;
+}
+.buttons {
+    height: 75px;
+    background: red;
+    margin-right: 10px;
+}
+.total-score-title {
+    background: purple;
+    height: 25px;
+}
+.total-score-wrapper {
+    background: aqua;
+    height: 150px;
+}
