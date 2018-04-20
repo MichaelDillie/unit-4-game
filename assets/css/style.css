@@ -1,3 +1,6 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
 .title-wrapper {
     background: green;
     height: 50px;
@@ -18,7 +21,7 @@
     background: blue;
     height: 150px;
 }
-.buttons {
+.crystal-img {
     height: 75px;
     background: red;
     margin-right: 10px;
