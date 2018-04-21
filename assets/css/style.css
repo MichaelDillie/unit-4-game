@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto Condensed', sans-serif;
+    /* background-image: url("../images/bg.jpg"); */
 }
 .title-wrapper {
     background: green;
@@ -14,16 +15,16 @@ body {
 }
 .add-up-wrapper {
     background: yellow;
-    height: 150px;
+    height: 100px;
 
 }
 .win-loss-wrapper {
     background: blue;
-    height: 150px;
+    height: 100px;
 }
 .crystal-img {
-    height: 75px;
-    background: red;
+    height: 85px;
+    /* background: red; */
     margin-right: 10px;
 }
 .total-score-title {
@@ -32,5 +33,5 @@ body {
 }
 .total-score-wrapper {
     background: aqua;
-    height: 150px;
+    height: 100px;
 }

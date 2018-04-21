@@ -1,26 +1,86 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    var randomNum;
-    var numOptions = [10, 5, 8, 3];
+    var randomNumber = 0;
+    var numOptions = [];
+    var images = ["assets/images/gem-1.png", "assets/images/gem-2.png", "assets/images/gem-3.png", "assets/images/gem-4.png"];
     var crystal = $("#crystal-row");
+    var count = 0;
+    var wins = 0;
+    var losses = 0;
 
-    function pickAddUpNum() {
-        randomNum = Math.floor(Math.random() * 102) + 19;
-        $("#add-up-num").text(randomNum);
+    function pickNumberOptions() {
+        for (var i = 0; i < 4; i++) {
+            var generateNumberOp = Math.floor(Math.random() * 9) + 1;
+            numOptions.push(generateNumberOp);
+        }
     }
-    pickAddUpNum();
+    pickNumberOptions();
+
+// ********* Cheat Code ******* */
+//    console.log(numOptions);
+
+    function pickAddUpNumber() {
+        randomNumber = Math.floor(Math.random() * 102) + 19;
+        $("#add-up-num").text(randomNumber);
+    }
+    pickAddUpNumber();
 
 
-    for(var i = 0; i < numOptions.length; i++) {
-
-        var crystalImg = $("<div>");
-        crystalImg.addClass("col m1 crystal-img");
-        crystalImg.attr("data-crystal-value", numOptions[i]);
-        crystal.append(crystalImg);
+    function resetGame() {
+        randomNumber = 0;
+        numOptions = [];
+        count = 0;
+        $(".crystal-img").remove();
+        pickAddUpNumber();
+        pickNumberOptions();
+        genImages();
+        $("#total-score").text(count);
+        $("#win-loss-message").text("");
     }
 
-    crystal.on("click", ".crystal-img", function() {
-        console.log("HAS BEEN CLICKED");
+
+
+
+    function genImages() {
+        for (var i = 0; i < numOptions.length; i++) {
+
+            var crystalImg = $("<img>");
+
+            crystalImg.addClass("col m1 crystal-img");
+
+            for (var j = 0; j < images.length; j++) {
+                var newImage = images[i];
+                crystalImg.attr("src", newImage);
+            }
+
+            crystalImg.attr("data-crystalvalue", numOptions[i]);
+
+            crystal.append(crystalImg);
+        }
+    }
+    genImages();
+
+
+
+
+
+    crystal.on("click", ".crystal-img", function () {
+        var crystalValue = $(this).attr("data-crystalvalue");
+        crystalValue = parseInt(crystalValue);
+        count += crystalValue;
+        $("#total-score").text(count);
+
+        if (count == randomNumber) {
+            console.log("Win");
+            wins++;
+            $("#wins").text(wins);
+            resetGame();
+        } else if (count >= randomNumber) {
+            console.log("Loss");
+            losses++;
+            $("#losses").text(losses);
+            resetGame();
+        }
     });
 
 
