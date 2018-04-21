@@ -1,37 +1,57 @@
+/* text color: #00C49F; */
+/* background: #2B3D53; */
+
 body {
     font-family: 'Roboto Condensed', sans-serif;
-    /* background-image: url("../images/bg.jpg"); */
+    color: #00C49F;
+    /* background: #00B6AB; */
+    background-image: url("../images/bg.jpg");
 }
 .title-wrapper {
-    background: green;
+    background: #2B3D53;
     height: 50px;
     width: 150px;
     text-align: center;
     line-height: 50px;
+    font-size:  2em;
+    font-weight: 700;
 }
 .instructions {
-    background: brown;
+    background: #2B3D53;
     padding-top: 20px;
 }
+.instructions-title {
+    font-size: 1.5em;
+}
+.instructions p {
+    font-weight: 300;
+}
 .add-up-wrapper {
-    background: yellow;
-    height: 100px;
-
+    background: #2B3D53;
+    height: 120px;
+    font-size: 4em;
+    line-height: 120px;
+    text-align: center;
 }
 .win-loss-wrapper {
-    background: blue;
-    height: 100px;
+    background: #2B3D53;
+    height: 120px;
+    text-align: center;
 }
 .crystal-img {
     height: 85px;
-    /* background: red; */
     margin-right: 10px;
 }
 .total-score-title {
-    background: purple;
+    background: #2B3D53;
     height: 25px;
+    line-height: 25px;
+    text-align: left;
 }
 .total-score-wrapper {
-    background: aqua;
-    height: 100px;
+    background: #2B3D53;
+    height: 120px;
+    font-size: 4em;
+    line-height: 120px;
+    text-align: center;
 }
